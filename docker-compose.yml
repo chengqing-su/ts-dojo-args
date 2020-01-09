@@ -1,0 +1,7 @@
+version: "2.4"
+services:
+  dev:
+    image: node:12.14.0
+    working_dir: /work
+    volumes:
+    - .:/work

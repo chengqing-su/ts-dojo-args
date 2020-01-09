@@ -1,0 +1,8 @@
+#!/bin/bash -e
+
+cd $(dirname $0)/..
+
+trap "docker-compose down --volumes" 0
+
+docker-compose run --rm dev sh -c 'yarn install'
+docker-compose run --rm dev "${@-bash}"

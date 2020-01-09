@@ -1,0 +1,37 @@
+{
+  "name": "ts-dojo-args",
+  "version": "0.0.1",
+  "description": "ts dojo args",
+  "main": "src/index.ts",
+  "repository": "",
+  "author": "",
+  "engines": {
+    "node": ">=10.0.0"
+  },
+  "license": "MIT",
+  "private": false,
+  "scripts": {
+    "compile": "rm -rf dist/ && tsc",
+    "test": "NODE_ENV=test jest --forceExit --coverage --verbose --detectOpenHandles",
+    "dev": "ts-node src/index",
+    "dev:watch": "nodemon --watch src/* --ext ts --exec 'yarn dev'",
+    "lint": "tsc --noEmit && eslint 'src/**/*.{js,ts}' 'test/**/*.{js,ts}'",
+    "lint-fix": "tsc --noEmit && eslint 'src/**/*.{js,ts}' 'test/**/*.{js,ts}' --fix"
+  },
+  "devDependencies": {
+    "@types/jest": "^24.0.18",
+    "@types/node": "^13.1.4",
+    "@types/supertest": "^2.0.8",
+    "@typescript-eslint/eslint-plugin": "^2.15.0",
+    "@typescript-eslint/parser": "^2.15.0",
+    "eslint": "^6.3.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "jest": "^24.9.0",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1",
+    "ts-jest": "^24.3.0",
+    "ts-node": "^8.3.0",
+    "typescript": "^3.6.2"
+  }
+}
